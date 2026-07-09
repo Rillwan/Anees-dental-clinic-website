@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@theme {
+   /* Break Points */
+   --breakpoint-xs: 460px;
+
+   /* Custom Colors */
+   --color-ink: #111113;
+   --color-paper: #FBFAF7;
+   --color-bone: #F3F1EA;
+   --color-gold: #B4913F;
+   --color-goldlight: #D9BE7C;
+   --color-line: #E7E3D8;
+   --color-slate: #6B6B6E;
+
+   /* Custom Font Families */
+   --font-serif: "Fraunces", serif;
+   --font-body: "Inter", sans-serif;
+   --font-script: "Playfair Display", serif;
+
+   --background-image-hero-pattern: url("../assets/bg-hero.jpeg");
+}

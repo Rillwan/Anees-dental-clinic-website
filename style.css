@@ -1,0 +1,153 @@
+/* Base resets & smooth type rendering */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    /* background: #FBFAF7; */
+    -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+    background: #B4913F;
+    color: #fff;
+}
+
+/* Preloader */
+#preloader {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    background: #111113;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#preloader svg {
+    width: 64px;
+    height: 64px;
+}
+
+#preloader .pl-bar {
+    width: 180px;
+    height: 1px;
+    background: #333;
+    margin-top: 24px;
+    position: relative;
+    overflow: hidden;
+}
+
+#preloader .pl-fill {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0%;
+    background: #B4913F;
+}
+
+#preloader .pl-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    letter-spacing: .25em;
+    color: #8a8a8a;
+    margin-top: 14px;
+    text-transform: uppercase;
+}
+
+/* Hide content flash before preloader takes over */
+body.loading {
+    overflow: hidden;
+}
+
+/* Reveal helper (GSAP sets initial state via JS, this is fallback for no-JS) */
+.reveal {
+    opacity: 1;
+}
+
+/* Reduced motion respect */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* Divider accent */
+.eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: .6rem;
+    font-size: .72rem;
+    letter-spacing: .28em;
+    text-transform: uppercase;
+    color: #B4913F;
+    font-weight: 600;
+}
+
+.eyebrow::before {
+    content: '';
+    width: 22px;
+    height: 1px;
+    background: #B4913F;
+    display: inline-block;
+}
+
+/* Card hover lift */
+.lift {
+    transition: transform .45s cubic-bezier(.22, 1, .36, 1), box-shadow .45s ease;
+}
+
+.lift:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 24px 48px -20px rgba(17, 17, 19, .25);
+}
+
+/* Marquee / ticker */
+.ticker-track {
+    display: flex;
+    width: max-content;
+    animation: ticker 28s linear infinite;
+}
+
+@keyframes ticker {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* Nav underline */
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 1px;
+    background: #B4913F;
+    transition: width .3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Focus visibility for accessibility */
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid #B4913F;
+    outline-offset: 3px;
+}
+
+.clip-tooth {
+    clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 50% 85%, 25% 100%, 0% 60%, 10% 20%);
+}

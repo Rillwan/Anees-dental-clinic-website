@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ============ SEO META PLACEHOLDERS ============ -->
+    <title>Dr.anees Dentalcare | Premium Dental Clinic in Dubai, UAE</title>
+    <meta name="description"
+        content="Dr.anees Dentalcare offers premium, advanced dental care in Dubai — dental implants, smile makeovers, orthodontics, root canal & children's dentistry. 15+ years experience, 5000+ happy patients.">
+    <meta name="keywords"
+        content="dentist Dubai, dental implants Dubai, smile makeover, orthodontist Dubai, Dr Anees Dentalcare, root canal treatment, teeth whitening Dubai">
+    <meta name="author" content="Dr.anees Dentalcare">
+    <link rel="canonical" href="https://www.draneesdentalcare.com/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="business.business">
+    <meta property="og:title" content="Dr.anees Dentalcare | Premium Dental Care in Dubai">
+    <meta property="og:description"
+        content="Exceptional care for every smile — advanced technology meets gentle, personalized dental treatment.">
+    <meta property="og:image" content="/assets/og-cover.jpg">
+    <meta property="og:url" content="https://www.draneesdentalcare.com/">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dr.anees Dentalcare">
+    <meta name="twitter:description"
+        content="Premium dental care in Dubai — implants, smile makeovers, orthodontics & more.">
+
+    <!-- Favicon placeholder -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+    <!-- ============ SCHEMA.ORG STRUCTURED DATA (Dentist / LocalBusiness) ============ -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dentist",
+  "name": "Dr.anees Dentalcare",
+  "image": "https://www.draneesdentalcare.com/assets/clinic-front.jpg",
+  "@id": "https://www.draneesdentalcare.com/",
+  "url": "https://www.draneesdentalcare.com/",
+  "telephone": "+971501234567",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "123, Smile Street, Health City",
+    "addressLocality": "Dubai",
+    "addressCountry": "AE"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": "25.2048", "longitude": "55.2708" },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "09:00", "closes": "20:00" }
+  ],
+  "sameAs": [
+    "https://www.facebook.com/draneesdentalcare",
+    "https://www.instagram.com/draneesdentalcare"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "200"
+  }
+}
+</script>
+
+    <!-- ============ TAILWIND CDN ============ -->
+    <link href="./dist/output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital@1&display=swap"
+        rel="stylesheet">
+
+    <!-- ============ GSAP + PLUGINS CDN ============ -->
+    <script src="./gsap-public/minified/gsap.min.js"></script>
+    <script src="./gsap-public/minified/ScrollTrigger.min.js"></script>
+    <script src="./gsap-public/minified/ScrollToPlugin.min.js"></script>
+    <script src="./Lenis/lenis.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script> -->
+
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="loading font-body text-ink bg-white">
+
+    <!-- =========================================================
+     PRELOADER — GSAP timeline animates tooth-mark icon draw,
+     progress bar fill, then hands off to hero entrance timeline.
+     ========================================================= -->
+    <div id="preloader" aria-hidden="true">
+        <svg viewBox="0 0 64 64" fill="none">
+            <path id="pl-tooth"
+                d="M32 6c-8 0-13 5-13 12 0 5 2 8 2 14 0 8 3 22 7 22 3 0 3-10 5-10s2 10 5 10c4 0 7-14 7-22 0-6 2-9 2-14 0-7-5-12-13-12z"
+                stroke="#B4913F" stroke-width="1.4" stroke-linejoin="round" />
+        </svg>
+        <div class="pl-bar">
+            <div class="pl-fill" id="pl-fill"></div>
+        </div>
+        <div class="pl-label">Loading your smile</div>
+    </div>
+
+    <!-- =========================================================
+     HEADER / NAV
+     ========================================================= -->
+    <header class="fixed top-0 inset-x-0 z-50 bg-paper/90 backdrop-blur-md border-b border-line">
+        <div class="max-w-7xl mx-auto px-5 md:px-8 h-[76px] flex items-center justify-between">
+            <a href="#home" class="flex items-center gap-2" aria-label="Dr.anees Dentalcare home">
+                <svg width="30" height="30" viewBox="0 0 64 64" fill="none">
+                    <path
+                        d="M32 6c-8 0-13 5-13 12 0 5 2 8 2 14 0 8 3 22 7 22 3 0 3-10 5-10s2 10 5 10c4 0 7-14 7-22 0-6 2-9 2-14 0-7-5-12-13-12z"
+                        stroke="#111113" stroke-width="1.6" />
+                </svg>
+                <span class="font-serif text-lg tracking-tight">Dr.anees <span
+                        class="block -mt-1 text-[9px] tracking-[0.3em] font-body font-semibold text-slate">DENTALCARE</span></span>
+            </a>
+
+            <nav class="hidden lg:flex items-center gap-9 text-sm font-medium" aria-label="Primary">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About Us</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#doctor" class="nav-link">Doctor</a>
+                <a href="#testimonials" class="nav-link">Testimonials</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+
+            <a href="#contact"
+                class="hidden sm:inline-flex items-center gap-2 bg-ink text-white text-sm font-medium px-5 py-2.5 rounded-full hover:bg-gold transition-colors">
+                Book Appointment
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
+                    <path d="M4 10h16M4 14h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                </svg>
+            </a>
+
+            <!-- mobile menu toggle -->
+            <button id="menuBtn" class="lg:hidden p-2" aria-label="Open menu" aria-expanded="false">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M3 6h18M3 12h18M3 18h18" stroke="#111113" stroke-width="1.6" stroke-linecap="round" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- mobile nav panel -->
+        <div id="mobileNav" class="lg:hidden hidden flex-col gap-1 px-5 pb-5 bg-paper border-t border-line">
+            <a href="#home" class="py-3 border-b border-line/70 mobile-link">Home</a>
+            <a href="#about" class="py-3 border-b border-line/70 mobile-link">About Us</a>
+            <a href="#services" class="py-3 border-b border-line/70 mobile-link">Services</a>
+            <a href="#doctor" class="py-3 border-b border-line/70 mobile-link">Doctor</a>
+            <a href="#testimonials" class="py-3 border-b border-line/70 mobile-link">Testimonials</a>
+            <a href="#contact" class="py-3 mobile-link">Contact</a>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- =========================================================
+     HERO SECTION (H1)
+     Animated on preloader completion via GSAP timeline (heroTL)
+     ========================================================= -->
+        <section id="home"
+            class="relative pt-[76px] bg-white grid items-center overflow-hidden min-h-screen bg-hero-pattern bg-cover bg-center"
+            aria-label="Hero">
+            <div class="max-w-7xl w-full mx-auto px-5 md:px-8 grid lg:grid-cols-2 gap-10 items-center pt-14 pb-8">
+
+                <div>
+                    <span class="eyebrow hero-el">Premium Dental Care</span>
+                    <h1 class="font-serif text-[2.6rem] leading-[1.05] sm:text-6xl mt-5 hero-el">
+                        Exceptional Care<br>for <em class="italic text-gold not-italic font-normal"
+                            style="font-style:italic;">Every
+                            Smile</em>
+                    </h1>
+                    <p class="mt-6 text-slate-800 text-[15px] leading-relaxed max-w-md hero-el">
+                        At Dr.anees Dentalcare, we combine advanced technology with a gentle touch to deliver healthy,
+                        beautiful
+                        smiles that last a lifetime.
+                    </p>
+
+                    <div class="mt-8 flex flex-wrap gap-4 hero-el">
+                        <a href="#contact"
+                            class="inline-flex items-center gap-2 bg-ink text-white px-6 py-3.5 rounded-full text-sm font-medium hover:bg-gold transition-colors">
+                            Book Appointment
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
+                                <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.6"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                        <a href="tel:+971501234567"
+                            class="inline-flex items-center gap-2 border border-black px-6 py-3.5 rounded-full text-sm font-medium hover:border-gold transition-colors">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
+                                <path
+                                    d="M6 4h3l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v3a2 2 0 0 1-2 2C10.5 20 4 13.5 4 6a2 2 0 0 1 2-2Z"
+                                    stroke="currentColor" stroke-width="1.4" />
+                            </svg>
+                            Call Now
+                        </a>
+                    </div>
+
+                    <div class="mt-9 flex items-center gap-4 hero-el">
+                        <div class="flex -space-x-3">
+                            <div class="w-9 h-9 rounded-full bg-bone border-2 border-paper overflow-hidden">
+                                <img src="https://png.pngtree.com/png-clipart/20231006/ourmid/pngtree-handsome-businessman-transparent-background-png-image_10194933.png"
+                                    alt="">
+                            </div>
+                            <div class="w-9 h-9 rounded-full bg-bone border-2 border-paper overflow-hidden">
+                                <img src="https://png.pngtree.com/png-clipart/20231006/ourmid/pngtree-handsome-businessman-transparent-background-png-image_10194933.png"
+                                    alt="">
+                            </div>
+                            <div class="w-9 h-9 rounded-full bg-bone border-2 border-paper overflow-hidden">
+                                <img src="https://png.pngtree.com/png-clipart/20231006/ourmid/pngtree-handsome-businessman-transparent-background-png-image_10194933.png"
+                                    alt="">
+                            </div>
+                        </div>
+                        <div class="text-sm">
+                            <p class="font-semibold">5000+ Happy Patients</p>
+                            <p class="text-slate text-xs">★★★★★ 4.9 (200+ Reviews)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portrait + floating stat cards -->
+                <div class="relative hero-el">
+                    <!-- <div
+                        class="rounded-[2rem] overflow-hidden bg-bone aspect-[4/5] max-w-md mx-auto flex items-end justify-center relative">
+                        <div
+                            class="w-full h-full bg-gradient-to-b from-bone to-line/60 flex items-center justify-center text-slate text-sm">
+                            [ Doctor Portrait Image ]
+                        </div>
+                    </div> -->
+
+                    <div class="hidden sm:grid gap-3 absolute right-0 bottom-0 w-fit">
+                        <div class="bg-white rounded-2xl border border-line p-4 shadow-sm flex items-center gap-2">
+                            <img src="./assets/icons/users.svg" class="w-[28px]" alt="users">
+                            <div class="">
+                                <p class="font-serif text-lg">500+</p>
+                                <p class="text-[11px] text-nowrap">Happy Patients</p>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-2xl border border-line p-4 shadow-sm flex items-center gap-2">
+                            <img src="./assets/icons/teeth.svg" class="w-[28px]" alt="users">
+                            <div class="">
+                                <p class="font-serif text-lg">20+</p>
+                                <p class="text-[11px] text-nowrap">Advanced Treatment</p>
+                            </div>
+                        </div>
+                        <!-- <div class="bg-white rounded-2xl border border-line p-3.5 shadow-sm">
+                            <p class="font-serif text-xl">15+</p>
+                            <p class="text-[11px] text-slate">Years Experience</p>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust strip (bento bar) -->
+        <section class="max-w-7xl mx-auto px-5 md:px-8 pt-14">
+            <div
+                class="bg-ink text-white rounded-3xl grid grid-cols-2 md:grid-cols-4 divide-x divide-white/10 overflow-hidden trust-strip">
+                <div class="p-6 text-center">
+                    <p class="font-serif text-lg">Advanced Tech</p>
+                    <p class="text-xs text-white/60 mt-1">State-of-the-art equipment</p>
+                </div>
+                <div class="p-6 text-center">
+                    <p class="font-serif text-lg">Expert Doctors</p>
+                    <p class="text-xs text-white/60 mt-1">Highly skilled professionals</p>
+                </div>
+                <div class="p-6 text-center">
+                    <p class="font-serif text-lg">Patient Comfort</p>
+                    <p class="text-xs text-white/60 mt-1">A relaxing environment</p>
+                </div>
+                <div class="p-6 text-center">
+                    <p class="font-serif text-lg">Affordable Care</p>
+                    <p class="text-xs text-white/60 mt-1">Treatments that fit your budget</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================
+     ABOUT SECTION (H2) — scroll reveal via ScrollTrigger
+     ========================================================= -->
+        <section id="about" class="py-20 md:py-28" aria-label="About the clinic">
+            <div class="max-w-7xl mx-auto px-5 md:px-8 grid lg:grid-cols-2 gap-12 items-center">
+
+                <div class="reveal-up order-2 lg:order-1 relative">
+                    <div
+                        class="rounded-3xl overflow-hidden bg-bone aspect-[4/3] flex items-center justify-center text-slate text-sm">
+                        <img src="./assets/about.jpeg" alt="">
+                    </div>
+                    <div
+                        class="absolute -bottom-5 left-5 bg-ink text-white rounded-2xl px-5 py-4 flex items-center gap-3">
+                        <svg width="20" height="30" viewBox="0 0 24 24" fill="none">
+                            <path
+                                d="M12 3c-4 0-6.5 2.5-6.5 6 0 2.5 1 4 1 7 0 4 1.5 11 3.5 11 1.5 0 1.5-5 2-5s.5 5 2 5c2 0 3.5-7 3.5-11 0-3 1-4.5 1-7 0-3.5-2.5-6-6.5-6z"
+                                stroke="#B4913F" stroke-width="1.4" />
+                        </svg>
+                        <div>
+                            <p class="font-serif">20+</p>
+                            <p class="text-[10px] text-white/60">Advanced Treatments</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="order-1 lg:order-2 reveal-up">
+                    <span class="eyebrow">About the Clinic</span>
+                    <h2 class="font-serif text-4xl md:text-[2.75rem] leading-tight mt-5">
+                        Where Advanced Technology<br>Meets <em class="not-italic text-gold"
+                            style="font-style:italic;">Gentle
+                            Care</em>
+                    </h2>
+                    <p class="mt-5 text-slate text-[15px] leading-relaxed max-w-lg">
+                        At Dr.anees Dentalcare, we believe every smile has a story. Our mission is to provide
+                        world-class dental
+                        treatment in a comfortable and caring environment using the latest technology and a personalized
+                        approach.
+                    </p>
+
+                    <div class="mt-8 space-y-5">
+                        <div class="flex gap-4">
+                            <div class="w-11 h-11 rounded-xl bg-ink flex items-center justify-center shrink-0"><svg
+                                    width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 3 2 8l10 5 10-5-10-5Z" stroke="#fff" stroke-width="1.4" />
+                                </svg></div>
+                            <div>
+                                <h3 class="font-semibold text-sm">Our Mission</h3>
+                                <p class="text-slate text-sm">To deliver exceptional dental care that enhances oral
+                                    health and overall
+                                    well-being.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-11 h-11 rounded-xl bg-ink flex items-center justify-center shrink-0"><svg
+                                    width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                    <circle cx="12" cy="12" r="8" stroke="#fff" stroke-width="1.4" />
+                                </svg></div>
+                            <div>
+                                <h3 class="font-semibold text-sm">Our Vision</h3>
+                                <p class="text-slate text-sm">To be the most trusted dental care provider known for
+                                    quality, innovation
+                                    and compassion.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-11 h-11 rounded-xl bg-ink flex items-center justify-center shrink-0"><svg
+                                    width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 21s-7-4.5-9-9a5 5 0 0 1 9-4 5 5 0 0 1 9 4c-2 4.5-9 9-9 9Z"
+                                        stroke="#fff" stroke-width="1.4" />
+                                </svg></div>
+                            <div>
+                                <h3 class="font-semibold text-sm">Our Values</h3>
+                                <p class="text-slate text-sm">Integrity, Excellence, Compassion and Patient-Centered
+                                    Care.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats bento row -->
+            <!-- <div class="max-w-7xl mx-auto px-5 md:px-8 mt-14">
+                <div
+                    class="border border-line rounded-3xl grid grid-cols-2 md:grid-cols-4 divide-x divide-y md:divide-y-0 divide-line reveal-up">
+                    <div class="p-6 text-center">
+                        <p class="font-serif text-2xl">5000+</p>
+                        <p class="text-xs text-slate mt-1">Happy Patients</p>
+                    </div>
+                    <div class="p-6 text-center">
+                        <p class="font-serif text-2xl">15+</p>
+                        <p class="text-xs text-slate mt-1">Years Experience</p>
+                    </div>
+                    <div class="p-6 text-center">
+                        <p class="font-serif text-2xl">20+</p>
+                        <p class="text-xs text-slate mt-1">Advanced Treatments</p>
+                    </div>
+                    <div class="p-6 text-center">
+                        <p class="font-serif text-2xl">98%</p>
+                        <p class="text-xs text-slate mt-1">Success Rate</p>
+                    </div>
+                </div>
+            </div> -->
+        </section>
+
+        <!-- =========================================================
+     SERVICES SECTION (H2) — staggered bento-grid reveal
+     ========================================================= -->
+        <section id="services" class="py-20 md:py-28 bg-bone/60" aria-label="Our services">
+            <div class="max-w-7xl mx-auto px-5 md:px-8">
+                <div class="text-center max-w-2xl mx-auto reveal-up">
+                    <span class="eyebrow justify-center">Our Services</span>
+                    <h2 class="font-serif text-4xl md:text-[2.75rem] mt-5">Our Core Services</h2>
+                    <p class="text-slate mt-4 text-[15px]">We offer a wide range of dental services using advanced
+                        technology and
+                        high-quality materials to ensure the best outcomes for your smile.</p>
+                </div>
+
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-14">
+                    <!-- Service card template x6 -->
+                    <article class="service-card lift bg-white rounded-3xl overflow-hidden border border-line">
+                        <div class="aspect-[4/3] bg-line/40 flex items-center justify-center text-slate text-xs">
+                            <img class="w-full object-cover" src="./assets/dental-implants.jpeg" alt="">
+                        </div>
+                        <div class="p-6">
+                            <div class="w-10 h-10 rounded-full bg-ink flex items-center justify-center mb-4"><svg
+                                    width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 3v18M5 8l7-5 7 5" stroke="#fff" stroke-width="1.4" />
+                                </svg></div>
+                            <h3 class="font-serif text-lg">Dental Implants</h3>
+                            <p class="text-slate text-sm mt-2">Permanent and natural-looking solutions for missing teeth
+                                that restore
+                                function and confidence.</p>
+                            <a href="#contact"
+                                class="inline-flex items-center gap-1.5 text-sm font-medium text-gold mt-4">Learn More
+                                <svg width="13" height="13" viewBox="0 0 24 24" fill="none">
+                                    <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.6" />
+                                </svg></a>
+                        </div>
+                    </article>
+
+                    <article class="service-card lift bg-white rounded-3xl overflow-hidden border border-line">
+                        <div class="aspect-[4/3] bg-line/40 flex items-center justify-center text-slate text-xs">
+                            <img class="w-full object-cover" src="./assets/smile-makover.jpeg" alt="">
+                        </div>
+                        <div class="p-6">
+                            <div class="w-10 h-10 rounded-full bg-ink flex items-center justify-center mb-4"><svg
+                                    width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                    <path d="M4 12c2 3 5 4 8 4s6-1 8-4" stroke="#fff" stroke-width="1.4"
+                                        stroke-linecap="round" />
+                                </svg></div>
+                            <h3 class="font-serif text-lg">Smile Makeover</h3>
+                            <p class="text-slate text-sm mt-2">Transform your smile with cosmetic treatments designed to
+                                enhance your
+                                appearance.</p>
+                            <a href="#contact"
+                                class="inline-flex items-center gap-1.5 text-sm font-medium text-gold mt-4">Learn More
+                                <svg width="13" height="13" viewBox="0 0 24 24" fill="none">
+                                    <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.6" />
+                                </svg></a>
+                        </div>
+                    </article>
+
+                    <article class="service-card lift bg-white rounded-3xl overflow-hidden border border-line">
+                        <div class="aspect-[4/3] bg-line/40 flex items-center justify-center text-slate text-xs">
+                            <img class="w-full object-cover" src="./assets/root-canal.jpeg" alt="">
+                            ]
+                        </div>
+                        <div class="p-6">
+                            <div class="w-10 h-10 rounded-full bg-ink flex items-center justify-center mb-4"><svg
+                                    width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                    <circle cx="12" cy="12" r="8" stroke="#fff" stroke-width="1.4" />
+                                </svg></div>
+                            <h3 class="font-serif text-lg">Root Canal Treatment</h3>
+                            <p class="text-slate text-sm mt-2">Painless and effective treatment to save infected teeth
+                                and relieve
+                                discomfort.</p>
+                            <a href="#contact"
+                                class="inline-flex items-center gap-1.5 text-sm font-medium text-gold mt-4">Learn More
+                                <svg width="13" height="13" viewBox="0 0 24 24" fill="none">
+                                    <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.6" />
+                                </svg></a>
+                        </div>
+                    </article>
+
+                    <article class="service-card lift bg-white rounded-3xl overflow-hidden border border-line">
+                        <div class="aspect-[4/3] bg-line/40 flex items-center justify-center text-slate text-xs">
+                            <img class="w-full object-cover" src="./assets/orthodonic.jpeg" alt="">
+                        </div>
+                        <div class="p-6">
+                            <div class="w-10 h-10 rounded-full bg-ink flex items-center justify-center mb-4"><svg
+                                    width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                    <path d="M4 9h16M4 15h16" stroke="#fff" stroke-width="1.4" />
+                                </svg></div>
+                            <h3 class="font-serif text-lg">Orthodontic Treatment</h3>
+                            <p class="text-slate text-sm mt-2">Straighten your teeth with modern braces or clear
+                                aligners for a
+                                perfect confident smile.</p>
+                            <a href="#contact"
+                                class="inline-flex items-center gap-1.5 text-sm font-medium text-gold mt-4">Learn More
+                                <svg width="13" height="13" viewBox="0 0 24 24" fill="none">
+                                    <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.6" />
+                                </svg></a>
+                        </div>
+                    </article>
+
+                    <article class="service-card lift bg-white rounded-3xl overflow-hidden border border-line">
+                        <div class="aspect-[4/3] bg-line/40 flex items-center justify-center text-slate text-xs">
+                            <img class="w-full object-cover" src="./assets/teeth-whitening.jpeg" alt="">
+                        </div>
+                        <div class="p-6">
+                            <div class="w-10 h-10 rounded-full bg-ink flex items-center justify-center mb-4"><svg
+                                    width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 2v4M4 12H2m20 0h-2M6 6 4.5 4.5M18 6l1.5-1.5" stroke="#fff"
+                                        stroke-width="1.4" stroke-linecap="round" />
+                                </svg></div>
+                            <h3 class="font-serif text-lg">Teeth Whitening</h3>
+                            <p class="text-slate text-sm mt-2">Remove stains and discoloration for a brighter, whiter
+                                and more
+                                youthful smile.</p>
+                            <a href="#contact"
+                                class="inline-flex items-center gap-1.5 text-sm font-medium text-gold mt-4">Learn More
+                                <svg width="13" height="13" viewBox="0 0 24 24" fill="none">
+                                    <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.6" />
+                                </svg></a>
+                        </div>
+                    </article>
+
+                    <article class="service-card lift bg-white rounded-3xl overflow-hidden border border-line">
+                        <div class="aspect-[4/3] bg-line/40 flex items-center justify-center text-slate text-xs">
+                            <img class="w-full object-cover" src="./assets/children-density.jpeg" alt="">
+                        </div>
+                        <div class="p-6">
+                            <div class="w-10 h-10 rounded-full bg-ink flex items-center justify-center mb-4"><svg
+                                    width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                    <circle cx="9" cy="10" r="1.4" fill="#fff" />
+                                    <circle cx="15" cy="10" r="1.4" fill="#fff" />
+                                    <path d="M8 15c1.5 1.5 6.5 1.5 8 0" stroke="#fff" stroke-width="1.4"
+                                        stroke-linecap="round" />
+                                </svg></div>
+                            <h3 class="font-serif text-lg">Children Dentistry</h3>
+                            <p class="text-slate text-sm mt-2">Gentle and caring dental care specially designed for
+                                children's
+                                healthy, happy smiles.</p>
+                            <a href="#contact"
+                                class="inline-flex items-center gap-1.5 text-sm font-medium text-gold mt-4">Learn More
+                                <svg width="13" height="13" viewBox="0 0 24 24" fill="none">
+                                    <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.6" />
+                                </svg></a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="text-center mt-12 reveal-up">
+                    <a href="#contact"
+                        class="inline-flex items-center gap-2 bg-ink text-white px-6 py-3.5 rounded-full text-sm font-medium hover:bg-gold transition-colors">View
+                        All Services
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
+                            <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.6" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================
+     DOCTOR SECTION (H2) — portrait pins while credentials
+     stagger in from the right on scroll (ScrollTrigger)
+     ========================================================= -->
+        <section id="doctor" class="py-20 md:py-28" aria-label="Meet the doctor">
+            <div class="max-w-7xl mx-auto px-5 md:px-8 grid lg:grid-cols-2 gap-14 items-center">
+
+                <div class="doctor-portrait relative">
+                    <div
+                        class="rounded-3xl overflow-hidden mx-auto bg-bone aspect-[4/5] max-w-md flex items-center justify-center text-slate text-sm">
+                        <img class="object-center object-cover" src="./assets/portrait.png" alt="">
+                    </div>
+                    <div class="absolute -bottom-6 left-0 bg-ink text-white rounded-2xl px-5 py-4">
+                        <p class="font-serif text-base leading-tight"
+                            style="font-family:'Playfair Display',serif;font-style:italic;">Dr. Anees</p>
+                        <p class="text-[11px] text-white/60 mt-1">BDS, MDS (Orthodontics)<br>Dental Surgeon</p>
+                    </div>
+                </div>
+
+                <div>
+                    <span class="eyebrow">Meet the Doctor</span>
+                    <h2 class="font-serif text-4xl md:text-[2.75rem] mt-5">Dr. Anees</h2>
+                    <p class="mt-1 text-2xl"
+                        style="font-family:'Playfair Display',serif;font-style:italic;color:#B4913F;">Your
+                        Smile Specialist</p>
+                    <p class="mt-5 text-slate text-[15px] leading-relaxed max-w-lg">
+                        With years of experience and a passion for perfection, Dr. Anees provides exceptional dental
+                        care with a
+                        gentle touch. His mission is to create healthy, beautiful smiles that boost confidence and
+                        improve quality
+                        of life.
+                    </p>
+
+                    <div class="grid sm:grid-cols-2 gap-x-8 gap-y-6 mt-9">
+                        <div class="doctor-cred flex gap-3">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="shrink-0 mt-0.5">
+                                <path d="M12 3 2 8l10 5 10-5-10-5Z" stroke="#111113" stroke-width="1.4" />
+                                <path d="M6 11v5c0 1.5 3 3 6 3s6-1.5 6-3v-5" stroke="#111113" stroke-width="1.4" />
+                            </svg>
+                            <div>
+                                <h3 class="font-semibold text-sm">Education</h3>
+                                <p class="text-slate text-sm">BDS, MDS (Orthodontics), Certified Invisalign Provider</p>
+                            </div>
+                        </div>
+                        <div class="doctor-cred flex gap-3">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="shrink-0 mt-0.5">
+                                <circle cx="12" cy="8" r="4" stroke="#111113" stroke-width="1.4" />
+                                <path d="M8 12 6 21l6-3 6 3-2-9" stroke="#111113" stroke-width="1.4" />
+                            </svg>
+                            <div>
+                                <h3 class="font-semibold text-sm">Experience</h3>
+                                <p class="text-slate text-sm">15+ Years of Clinical Experience</p>
+                            </div>
+                        </div>
+                        <div class="doctor-cred flex gap-3">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="shrink-0 mt-0.5">
+                                <path d="M12 21s-7-4.5-9-9a5 5 0 0 1 9-4 5 5 0 0 1 9 4c-2 4.5-9 9-9 9Z" stroke="#111113"
+                                    stroke-width="1.4" />
+                            </svg>
+                            <div>
+                                <h3 class="font-semibold text-sm">Expertise</h3>
+                                <p class="text-slate text-sm">Cosmetic Dentistry, Dental Implants, Orthodontics, Root
+                                    Canal Treatment
+                                </p>
+                            </div>
+                        </div>
+                        <div class="doctor-cred flex gap-3">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="shrink-0 mt-0.5">
+                                <path d="M4 20V10l8-6 8 6v10" stroke="#111113" stroke-width="1.4" />
+                            </svg>
+                            <div>
+                                <h3 class="font-semibold text-sm">Patients</h3>
+                                <p class="text-slate text-sm">5000+ Happy Patients</p>
+                            </div>
+                        </div>
+                        <div class="doctor-cred flex gap-3">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="shrink-0 mt-0.5">
+                                <path
+                                    d="M12 3v3M12 18v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M3 12h3m12 0h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"
+                                    stroke="#111113" stroke-width="1.4" />
+                            </svg>
+                            <div>
+                                <h3 class="font-semibold text-sm">Certifications</h3>
+                                <p class="text-slate text-sm">Advanced Training in USA, UK &amp; Dubai</p>
+                            </div>
+                        </div>
+                        <div class="doctor-cred flex gap-3">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="shrink-0 mt-0.5">
+                                <circle cx="12" cy="12" r="9" stroke="#111113" stroke-width="1.4" />
+                                <path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18" stroke="#111113"
+                                    stroke-width="1.4" />
+                            </svg>
+                            <div>
+                                <h3 class="font-semibold text-sm">Approach</h3>
+                                <p class="text-slate text-sm">Compassionate Care &amp; Personalized Treatment</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================
+     TESTIMONIALS SECTION (H2) — dark editorial band, GSAP
+     horizontal-swipe carousel controlled by prev/next buttons
+     ========================================================= -->
+        <section id="testimonials" class="py-20 md:py-28 bg-ink text-white overflow-hidden"
+            aria-label="Patient testimonials">
+            <div class="max-w-7xl mx-auto px-5 md:px-8">
+                <div class="text-center max-w-2xl mx-auto reveal-up">
+                    <span class="eyebrow justify-center">Patient Testimonials</span>
+                    <h2 class="font-serif text-4xl md:text-[2.75rem] mt-5">What Our Patients Say</h2>
+                    <p class="text-white/60 mt-4 text-[15px]">Real stories from real people who love their smiles and
+                        trust
+                        Dr.anees Dentalcare.</p>
+                </div>
+
+                <div class="relative mt-14">
+                    <button id="prevBtn" aria-label="Previous testimonial"
+                        class="hidden md:flex absolute -left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full border border-white/20 items-center justify-center hover:border-gold transition-colors z-10">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                            <path d="M15 6l-6 6 6 6" stroke="#fff" stroke-width="1.6" />
+                        </svg>
+                    </button>
+                    <button id="nextBtn" aria-label="Next testimonial"
+                        class="hidden md:flex absolute -right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full border border-white/20 items-center justify-center hover:border-gold transition-colors z-10">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                            <path d="M9 6l6 6-6 6" stroke="#fff" stroke-width="1.6" />
+                        </svg>
+                    </button>
+
+                    <div id="testimonialTrack" class="flex gap-6 transition-transform duration-500 ease-out">
+                        <blockquote
+                            class="testi-card shrink-0 w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] bg-white text-ink rounded-3xl p-7">
+                            <div class="text-gold text-sm mb-3">★★★★★</div>
+                            <p class="text-sm leading-relaxed">"Dr. Anees and his team are simply amazing! The clinic is
+                                beautiful,
+                                the staff is friendly, and the treatment was completely painless."</p>
+                            <footer class="mt-5 flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-bone overflow-hidden">
+                                    <img class="object-cover w-full h-full aspect-square"
+                                        src="https://png.pngtree.com/png-clipart/20241121/original/pngtree-successful-businessman-png-image_17282669.png"
+                                        alt="">
+                                </div>
+                                <div><cite class="not-italic font-semibold text-sm block">Sarah Khan</cite><span
+                                        class="text-xs text-slate">Dubai, UAE</span></div>
+                            </footer>
+                        </blockquote>
+
+                        <blockquote
+                            class="testi-card shrink-0 w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] bg-white text-ink rounded-3xl p-7">
+                            <div class="text-gold text-sm mb-3">★★★★★</div>
+                            <p class="text-sm leading-relaxed">"I had my smile makeover done here and the results
+                                exceeded my
+                                expectations. Highly recommended for anyone looking for the best dental care!"</p>
+                            <footer class="mt-5 flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-bone overflow-hidden">
+                                    <img class="object-cover w-full h-full aspect-square"
+                                        src="https://png.pngtree.com/png-clipart/20241121/original/pngtree-successful-businessman-png-image_17282669.png"
+                                        alt="">
+                                </div>
+                                <div><cite class="not-italic font-semibold text-sm block">Ahmed Raza</cite><span
+                                        class="text-xs text-slate">Sharjah, UAE</span></div>
+                            </footer>
+                        </blockquote>
+
+                        <blockquote
+                            class="testi-card shrink-0 w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] bg-white text-ink rounded-3xl p-7">
+                            <div class="text-gold text-sm mb-3">★★★★★</div>
+                            <p class="text-sm leading-relaxed">"Very professional and welcoming environment. Dr. Anees
+                                explained
+                                everything clearly and made me feel very comfortable."</p>
+                            <footer class="mt-5 flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-bone overflow-hidden">
+                                    <img class="object-cover w-full h-full aspect-square"
+                                        src="https://png.pngtree.com/png-clipart/20241121/original/pngtree-successful-businessman-png-image_17282669.png"
+                                        alt="">
+                                </div>
+                                <div><cite class="not-italic font-semibold text-sm block">Priya Mehta</cite><span
+                                        class="text-xs text-slate">Dubai, UAE</span></div>
+                            </footer>
+                        </blockquote>
+                    </div>
+
+                    <div class="flex justify-center gap-2 mt-8" id="dots">
+                        <span class="w-2 h-2 rounded-full bg-gold dot" data-i="0"></span>
+                        <span class="w-2 h-2 rounded-full bg-white/25 dot" data-i="1"></span>
+                        <span class="w-2 h-2 rounded-full bg-white/25 dot" data-i="2"></span>
+                    </div>
+                </div>
+
+                <!-- Trust metrics bar -->
+                <div
+                    class="mt-16 bg-white text-ink rounded-3xl p-6 md:p-8 flex flex-wrap items-center justify-between gap-6 reveal-up">
+                    <div class="flex flex-wrap gap-8">
+                        <div>
+                            <p class="font-serif text-xl">200+</p>
+                            <p class="text-xs text-slate">5 Star Reviews</p>
+                        </div>
+                        <div>
+                            <p class="font-serif text-xl">4.9/5</p>
+                            <p class="text-xs text-slate">Average Rating</p>
+                        </div>
+                        <div>
+                            <p class="font-serif text-xl">98%</p>
+                            <p class="text-xs text-slate">Patients Recommend Us</p>
+                        </div>
+                    </div>
+                    <a href="#contact"
+                        class="inline-flex items-center gap-2 bg-ink text-white px-6 py-3.5 rounded-full text-sm font-medium hover:bg-gold transition-colors">
+                        Book Your Appointment
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
+                            <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.6" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================
+     CONTACT / BOOKING SECTION (H2)
+     ========================================================= -->
+        <section id="contact" class="py-20 md:py-28" aria-label="Contact and appointment booking">
+            <div class="max-w-7xl mx-auto px-5 md:px-8">
+
+                <div class="rounded-[2rem] bg-bone reveal-up overflow-hidden relative">
+                    <div class="p-8 md:p-14 relative z-10">
+                        <span class="eyebrow">Your Smile, Our Priority</span>
+                        <h2 class="font-serif text-4xl md:text-[3rem] leading-tight mt-5">Ready for a <br><em
+                                class="not-italic text-gold" style="font-style:italic;">Beautiful Smile?</em></h2>
+                        <p class="text-slate mt-4 text-[15px] max-w-md">Experience world-class dental care in a
+                            comfortable and
+                            friendly environment.
+                        </p>
+
+                        <div class="flex gap-4 items-center mt-8 max-w-[35rem]">
+                            <div class="flex items-center gap-2 max-w-[180px]">
+                                <img src="./assets/icons/calendar.svg"
+                                    class="rounded-full border border p-2 w-[40px] aspect-square object-cover" alt="">
+                                <div class="">
+                                    <h4 class="text-[12px] font-semibold">Easy Appointment</h4>
+                                    <p class="text-[10px] text-wrap">Book your visit in minutes</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <img src="./assets/icons/shield.svg"
+                                    class="rounded-full border border p-2 w-[40px] aspect-square object-cover" alt="">
+                                <div class="">
+                                    <h4 class="text-[12px] font-semibold">Safe & Hygienic</h4>
+                                    <p class="text-[10px] text-wrap">Advanced sterilization & safety protocols</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-wrap gap-4 mt-8">
+                            <a href="#appointment-form"
+                                class="inline-flex items-center gap-2 bg-ink text-white px-6 py-3.5 rounded-full text-sm font-medium hover:bg-gold transition-colors">Book
+                                Appointment</a>
+                            <a href="tel:+971501234567"
+                                class="inline-flex items-center gap-2 border border-line px-6 py-3.5 rounded-full text-sm font-medium">Call
+                                Now</a>
+                            <a href="https://wa.me/971501234567" target="_blank" rel="noopener"
+                                class="inline-flex items-center gap-2 border border-line px-6 py-3.5 rounded-full text-sm font-medium">WhatsApp
+                                Us</a>
+                        </div>
+                    </div>
+                    <div
+                        class="hidden md:block absolute border-x-[16px] border-white right-[-20px] top-0 h-full w-full md:w-1/2 rounded-bl-full overflow-hidden bg-line/40 aspect-[4/3] flex items-center justify-center text-slate text-sm">
+                        <img class="h-full w-full object-cover blur-[4px] md:blur-none"
+                            src="./assets/treatment-room-last.jpeg" alt="">
+                    </div>
+                </div>
+
+                <div class="grid lg:grid-cols-5 gap-10 mt-16">
+                    <!-- Appointment form -->
+                    <form id="appointment-form" class="lg:col-span-3 reveal-up" aria-label="Book an appointment">
+                        <h3 class="font-serif text-2xl">Get In Touch &amp; Book Your Appointment</h3>
+                        <p class="text-slate text-sm mt-2 max-w-md">We're here to help you with all your dental care
+                            needs. Fill out
+                            the form and our team will get back to you shortly.</p>
+
+                        <div class="grid sm:grid-cols-2 gap-4 mt-7">
+                            <input type="text" placeholder="Your Name" required
+                                class="border border-line rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-gold">
+                            <input type="tel" placeholder="Phone Number" required
+                                class="border border-line rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-gold">
+                            <input type="email" placeholder="Email Address" required
+                                class="border border-line rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-gold">
+                            <select
+                                class="border border-line rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-gold text-slate">
+                                <option>Select Treatment</option>
+                                <option>Dental Implants</option>
+                                <option>Smile Makeover</option>
+                                <option>Orthodontics</option>
+                            </select>
+                            <input type="date"
+                                class="border border-line rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-gold text-slate">
+                            <input type="time"
+                                class="border border-line rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-gold text-slate">
+                        </div>
+                        <textarea placeholder="Your Message (Optional)" rows="3"
+                            class="w-full border border-line rounded-xl px-4 py-3 text-sm mt-4 focus:outline-none focus:border-gold"></textarea>
+
+                        <button type="submit"
+                            class="w-full bg-ink text-white rounded-xl py-3.5 text-sm font-medium mt-5 hover:bg-gold transition-colors">Send
+                            Appointment Request</button>
+
+                        <div class="grid sm:grid-cols-3 gap-4 mt-6 text-xs text-slate">
+                            <div>Quick Response — We reply within 24 hrs</div>
+                            <div>100% Confidential — Your information is safe</div>
+                            <div>No Hidden Cost — Transparent pricing</div>
+                        </div>
+                    </form>
+
+                    <!-- Clinic info -->
+                    <div class="lg:col-span-2 reveal-up">
+                        <h3 class="font-serif text-2xl">Visit Our Clinic</h3>
+                        <div class="mt-6 space-y-5 text-sm">
+                            <div class="flex gap-3"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                    class="shrink-0 mt-0.5">
+                                    <path d="M12 21s-7-7-7-12a7 7 0 0 1 14 0c0 5-7 12-7 12Z" stroke="#111113"
+                                        stroke-width="1.4" />
+                                </svg>
+                                <p>Alathurpadi, Melmuri, Malappuram, Kerala 676517, India</p>
+                            </div>
+                            <div class="flex gap-3"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                    class="shrink-0 mt-0.5">
+                                    <path
+                                        d="M6 4h3l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v3a2 2 0 0 1-2 2C10.5 20 4 13.5 4 6a2 2 0 0 1 2-2Z"
+                                        stroke="#111113" stroke-width="1.4" />
+                                </svg>
+                                <p>+91 123456789<br>+91 123456789</p>
+                            </div>
+                            <div class="flex gap-3"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                    class="shrink-0 mt-0.5">
+                                    <rect x="3" y="5" width="18" height="14" rx="2" stroke="#111113"
+                                        stroke-width="1.4" />
+                                    <path d="m3 7 9 6 9-6" stroke="#111113" stroke-width="1.4" />
+                                </svg>
+                                <p>info@draneesdentalcare.com</p>
+                            </div>
+                            <div class="flex gap-3"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                    class="shrink-0 mt-0.5">
+                                    <circle cx="12" cy="12" r="9" stroke="#111113" stroke-width="1.4" />
+                                    <path d="M12 7v5l3 3" stroke="#111113" stroke-width="1.4" />
+                                </svg>
+                                <p>Mon - Sat: 9:00 AM - 8:00 PM<br>Sunday: Closed</p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="rounded-2xl overflow-hidden bg-line/40 aspect-[16/10] mt-6 flex items-center justify-center text-slate text-sm">
+                            <iframe class="w-full h-full"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3915.5854544782796!2d76.0760367!3d11.0696745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba64b006ddf374f%3A0xe3d5914d1852cd68!2sDr%20Anees&#39;dental%20care!5e0!3m2!1sen!2ssa!4v1783466484023!5m2!1sen!2ssa"
+                                width="" height="" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                        </div>
+
+                        <div class="flex gap-3 mt-5">
+                            <a href="#" aria-label="Facebook"
+                                class="w-10 h-10 rounded-full border border-line flex items-center justify-center hover:border-gold"><svg
+                                    width="15" height="15" viewBox="0 0 24 24" fill="none">
+                                    <path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v7h3v-7h2.5l.5-3H14V9Z"
+                                        fill="#111113" />
+                                </svg></a>
+                            <a href="#" aria-label="Instagram"
+                                class="w-10 h-10 rounded-full border border-line flex items-center justify-center hover:border-gold"><svg
+                                    width="15" height="15" viewBox="0 0 24 24" fill="none">
+                                    <rect x="3" y="3" width="18" height="18" rx="5" stroke="#111113"
+                                        stroke-width="1.4" />
+                                    <circle cx="12" cy="12" r="4" stroke="#111113" stroke-width="1.4" />
+                                </svg></a>
+                            <a href="https://wa.me/971501234567" target="_blank" rel="noopener" aria-label="WhatsApp"
+                                class="w-10 h-10 rounded-full border border-line flex items-center justify-center hover:border-gold"><svg
+                                    width="15" height="15" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.7-1.2A9 9 0 1 0 12 3Z" stroke="#111113"
+                                        stroke-width="1.4" />
+                                </svg></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- =========================================================
+     FOOTER
+     ========================================================= -->
+    <footer class="bg-ink text-white pt-16 pb-8" aria-label="Site footer">
+        <div class="max-w-7xl mx-auto px-5 md:px-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+            <div>
+                <div class="flex items-center gap-2">
+                    <svg width="26" height="26" viewBox="0 0 64 64" fill="none">
+                        <path
+                            d="M32 6c-8 0-13 5-13 12 0 5 2 8 2 14 0 8 3 22 7 22 3 0 3-10 5-10s2 10 5 10c4 0 7-14 7-22 0-6 2-9 2-14 0-7-5-12-13-12z"
+                            stroke="#fff" stroke-width="1.6" />
+                    </svg>
+                    <span class="font-serif text-lg">Dr.anees</span>
+                </div>
+                <p class="text-white/50 text-sm mt-4 leading-relaxed">Providing exceptional dental care with advanced
+                    technology
+                    and a gentle touch for a lifetime of healthy smiles.</p>
+            </div>
+            <div>
+                <h3 class="font-semibold text-sm mb-4">Quick Links</h3>
+                <ul class="space-y-2 text-sm text-white/60">
+                    <li><a href="#home" class="hover:text-gold">Home</a></li>
+                    <li><a href="#about" class="hover:text-gold">About Us</a></li>
+                    <li><a href="#services" class="hover:text-gold">Services</a></li>
+                    <li><a href="#doctor" class="hover:text-gold">Doctor</a></li>
+                    <li><a href="#testimonials" class="hover:text-gold">Testimonials</a></li>
+                    <li><a href="#contact" class="hover:text-gold">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-semibold text-sm mb-4">Our Services</h3>
+                <ul class="space-y-2 text-sm text-white/60">
+                    <li>Dental Implants</li>
+                    <li>Smile Makeover</li>
+                    <li>Root Canal Treatment</li>
+                    <li>Orthodontic Treatment</li>
+                    <li>Teeth Whitening</li>
+                    <li>Children Dentistry</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-semibold text-sm mb-4">Newsletter</h3>
+                <p class="text-white/50 text-sm mb-4">Subscribe to get dental tips, offers and updates.</p>
+                <form class="flex" aria-label="Newsletter signup">
+                    <input type="email" placeholder="Enter your email" required
+                        class="flex-1 bg-white/10 rounded-l-full px-4 py-2.5 text-sm placeholder-white/40 focus:outline-none">
+                    <button type="submit" aria-label="Subscribe" class="bg-gold rounded-r-full px-4"><svg width="14"
+                            height="14" viewBox="0 0 24 24" fill="none">
+                            <path d="M4 12h16M13 6l6 6-6 6" stroke="#111113" stroke-width="1.8" />
+                        </svg></button>
+                </form>
+            </div>
+        </div>
+        <div
+            class="max-w-7xl mx-auto px-5 md:px-8 border-t border-white/10 mt-12 pt-6 flex flex-col sm:flex-row justify-between gap-3 text-xs text-white/40">
+            <p>© 2024 Dr.anees Dentalcare. All Rights Reserved.</p>
+            <div class="flex gap-5"><a href="#" class="hover:text-white">Privacy Policy</a><a href="#"
+                    class="hover:text-white">Terms &amp; Conditions</a></div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp button -->
+    <a href="https://wa.me/+9567479901" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"
+        class="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full bg-[#25D366] flex items-center justify-center shadow-lg"
+        id="waBtn">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+            <path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.7-1.2A9 9 0 1 0 12 3Z" stroke="#fff" stroke-width="1.6" />
+        </svg>
+    </a>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
