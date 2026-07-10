@@ -158,4 +158,50 @@ document.addEventListener("DOMContentLoaded", () => {
        9. WHATSAPP FLOAT — subtle pulse to draw attention
        ============================================================ */
     gsap.to('#waBtn', { scale: 1.08, duration: 1, repeat: -1, yoyo: true, ease: 'sine.inOut' });
+
+    /* ============================================================
+       TOUCH SWIPE TESTIMONIAL CAROUSEL
+       ============================================================ */
+    (() => {
+        const track = document.getElementById('testimonialTrack');
+        const cards = track.querySelectorAll('.testi-card');
+        const dots = document.querySelectorAll('.dot');
+        let index = 0;
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        function getStep() {
+            return cards[0].getBoundingClientRect().width + 24;
+        }
+
+        function goTo(i) {
+            const max = window.innerWidth >= 1024 ? cards.length - 3 : window.innerWidth >= 640 ? cards.length - 2 : cards.length - 1;
+            index = Math.max(0, Math.min(i, Math.max(max, 0)));
+            gsap.to(track, { x: -index * getStep(), duration: 0.6, ease: 'power3.out' });
+            dots.forEach((d, di) => d.classList.toggle('bg-gold', di === index));
+            dots.forEach((d, di) => d.classList.toggle('bg-white/25', di !== index));
+        }
+
+        document.getElementById('nextBtn').addEventListener('click', () => goTo(index + 1));
+        document.getElementById('prevBtn').addEventListener('click', () => goTo(index - 1));
+        dots.forEach((d) => d.addEventListener('click', () => goTo(parseInt(d.dataset.i))));
+
+        track.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        track.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, { passive: true });
+
+        function handleSwipe() {
+            const swipeThreshold = 50;
+            if (touchStartX - touchEndX > swipeThreshold) {
+                goTo(index + 1);
+            } else if (touchEndX - touchStartX > swipeThreshold) {
+                goTo(index - 1);
+            }
+        }
+    })();
 });

@@ -19,4 +19,7 @@
    --font-script: "Playfair Display", serif;
 
    --background-image-hero-pattern: url("../assets/bg-hero.jpeg");
+   --background-image-hero-pattern-sm: url("../assets/bg-hero-sm.jpeg");
+   --background-image-hero-pattern-md: url("../assets/bg-hero-md.jpeg");
+   --background-image-hero-pattern-lg: url("../assets/bg-hero-lg.jpeg");
 }
