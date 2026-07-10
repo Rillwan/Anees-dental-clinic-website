@@ -1,7 +1,5 @@
 node_modules/
 
-dist.zip
-
 # Logs
 logs
 *.log
